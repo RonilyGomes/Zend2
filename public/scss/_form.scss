@@ -1,0 +1,58 @@
+#form{
+  //div contendo o titulo
+  .title{
+    background-color: $cadastro__bg;
+    margin-bottom: 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    >h1{
+      color: $white;
+      font: $font_main;
+      font-size: 30px;
+      text-align: center;
+      margin: 0;
+      padding: 15px 0;
+    }
+  }
+
+  //div contendo formulario
+  .form_content{
+
+    background-color: $white;
+    border: 1px solid $cadastro__border;
+    border-radius: 5px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    margin-left: 25% !important;
+
+    @include make-xs-column(12);
+    @include make-sm-column(8);
+    @include make-md-column(6);
+
+    @include make-xs-column-offset(0);
+    @include make-sm-column-offset(4);
+    @include make-md-column-offset(3);
+
+    form{
+      margin-left: 20px;
+      margin-right: 20px;
+
+      label{
+        padding-left: 3px;
+        color: $darkgrey;
+      }
+
+      button{
+        margin: 10px 20% 20px;
+        padding: 8px 23%;
+        font-size: 18px;
+        background-color: $cadastro__bg;
+
+      }
+    }
+  }
+
+}

@@ -1,0 +1,87 @@
+body{
+
+  //cabeçalho da pagina
+  >header{
+    background-color: $blue;
+    padding: 32px 0;
+
+    >.container{
+
+      >.content{
+
+        //div contendo logo do cabeçalho
+        >.logo_container{
+
+          float: left !important;
+
+          @include make-sm-column(4);
+          @include make-md-column(4);
+        }
+
+        //div contendo usuario do sistema
+        >.user_container{
+
+          margin-top: 2px;
+          background-color: $white;
+          height: 36px;
+          float: right !important;
+          padding-left: 0 !important;
+          padding-right: 5px !important;
+          margin-right: 25px !important;
+          border-radius: 4px;
+
+          @include make-xs-column(3);
+          @include make-sm-column(3);
+          @include make-md-column(2);
+
+          @include make-xs-column-offset(4);
+          @include make-sm-column-offset(4);
+          @include make-md-column-offset(5);
+
+          >.icon{
+              padding: 8px 25px 9px 10px;
+              font-size: 14px;
+              font-weight: normal;
+              line-height: initial;
+              top: inherit;
+              color: $darkgrey;
+              text-align: center;
+              background-color: $icon_bg;
+              border: 1px solid $icon_border;
+              border-radius: 4px;
+              border-bottom-right-radius: 0;
+              border-top-right-radius: 0;
+              width: 19%;
+              float: left;
+          }
+
+          >.user_text{
+            text-align: center;
+            float: left;
+            width: 50%;
+
+            >p{
+              font: $font_main;
+              color: $darkgrey;
+              line-height: 36px;
+              font-size: 16px;
+            }
+          }
+
+          .logout{
+            width: 30%;
+            float: left;
+
+            >a {
+              padding: 4px 10px;
+              float: right;
+              margin-top: 3px;
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+}

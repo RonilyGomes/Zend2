@@ -1,0 +1,26 @@
+//padrao de cor para body
+body{
+  background-color: $body__bg;
+}
+
+//alteração de cor
+.btn-primary{
+  background-color: $blue;
+  border: 1px solid $blue;
+
+  &:hover{
+    background-color: $blue_hover;
+    transition: all .4s linear;
+  }
+}
+
+//alteração da class row
+.content{
+  @include make-row;
+}
+
+//carregqamento do sprite
+.sprite_redes_sociais{
+  background-image: url("../images/sprite-redes-sociais.png");
+  background-repeat: no-repeat;
+}

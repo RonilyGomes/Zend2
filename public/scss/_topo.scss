@@ -1,0 +1,95 @@
+#topo{
+
+  margin-bottom: 10px;
+
+  >.alert{
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+
+  //barra de pesquisa
+  >.search{
+
+    padding-right: 0!important;
+    padding-left: 0!important;
+
+    @include make-xs-column(12);
+    @include make-sm-column(8);
+    @include make-md-column(8);
+
+    @include make-xs-column-offset(0);
+    @include make-sm-column-offset(2);
+    @include make-md-column-offset(2);
+
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    .icon-line{
+      line-height: initial;
+    }
+  }
+
+  //div contendo h1
+  >.titulo{
+    padding-left: 5px!important;
+
+    @include make-xs-column(3);
+    @include make-sm-column(3);
+    @include make-md-column(3);
+
+    h1{
+      font: $font_main;
+      font-size: 25px;
+      color: $darkgrey;
+      margin-top: 7px;
+    }
+  }
+
+  //links para cadastrar e usuarios
+  .links{
+    padding-right: 0!important;
+
+    @include make-xs-column(9);
+    @include make-sm-column(5);
+    @include make-md-column(3);
+
+    @include make-sm-column-offset(4);
+    @include make-md-column-offset(6);
+
+    .list_links{
+
+      @include clearfix;
+
+      list-style: none;
+      margin-bottom: 0;
+      padding-left: 0;
+      float: right;
+    }
+    .list_links >li{
+      float: left;
+      position: relative;
+      display: block;
+
+      &:first-child{
+        margin-right: 7px;
+      }
+    }
+    .list_links > li > a{
+      padding: 8px 12px;
+      position: relative;
+      display: block;
+
+      &:hover{
+        background-color: $blue_hover;
+        transition: all .4s linear;
+      }
+
+      &.active{
+        background-color: $blue_hover;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,79 @@
+#table{
+    min-height: 400px;
+
+    >.table-responsive{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+      >.table{
+        border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+
+        >thead{
+          >tr.table__header{
+            background-color: $blue;
+            color: $white;
+            height: 44px;
+
+            >th{
+              vertical-align: middle;
+              text-align: center;
+            }
+          }
+        }
+
+        >tbody{
+          >tr.table__body{
+            background-color: $white;
+            color: $darkgrey;
+            height: 40px;
+
+            >td{
+              vertical-align: middle;
+              text-align: center;
+              font: $font_main;
+              font-size: 15px;
+            }
+          }
+          tr.notFound{
+            font-size: 25px;
+            font: $font_main;
+            color: $darkgrey;
+            text-align: center;
+          }
+        }
+      }
+
+    }
+
+  >.table__paginator{
+
+    @include center-block;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    width: 150px;
+
+    >nav > ul.pagination{
+      margin: 0;
+    }
+  }
+
+  >.modal{
+    .modal-dialog{
+      @include make-xs-column(12);
+      @include make-sm-column(8);
+      @include make-md-column(6);
+
+      @include make-sm-column-offset(2);
+      @include make-md-column-offset(3);
+    }
+    .modal-body{
+
+      h3{
+        color: $darkgrey;
+        font: $font_main;
+        font-size: 22px;
+      }
+    }
+  }
+}

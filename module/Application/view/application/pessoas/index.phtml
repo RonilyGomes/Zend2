@@ -1,0 +1,109 @@
+<?php use Application\Util\ConvUtil?>
+<div class="container" id="topo">
+	<?php if(count($messages)): ?>
+	
+		<?php foreach ($messages as $value):	
+			$key = key($value);
+			$message = current($value);
+		?>
+			
+			<div class="alert alert-<?php echo $key;?> alert-dismissible" role="alert">
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  <?php echo $message;?>
+			</div>
+	
+		<?php endforeach;?>
+			
+	<?php endif;?>
+
+        <div class="search">
+            <form action="" method="get">
+                <div class="input-group ">
+                    <input type="search" class="form-control" placeholder="Buscar..." name="buscar">
+                                <span class="input-group-btn">
+                                     <button class="btn btn-primary" type="submit">
+                                         <span class="icon-line glyphicon glyphicon-search"></span>
+                                     </button>
+                                </span>
+                </div><!-- /input-group -->
+            </form>
+        </div>
+
+        <div class="titulo">
+            <h1>Pessoas</h1>
+        </div>
+
+        <div class="links">
+            <ul class="list_links">
+                <li><a class="btn btn-primary" href="pessoas/cadastro">Cadastrar</a></li>
+                <li><a class="btn btn-primary" href="#">Usuarios</a></li>
+            </ul>
+        </div>
+</div>
+
+<section class="container" Id="table">
+
+
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr class="table__header">
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            <?php 
+				if(count($pessoas)):
+					foreach ($pessoas as $pessoa):?>
+				<tr class="table__body">
+					<td><?php echo $pessoa->pessoa_cod;?></td>
+					<td><?php echo $pessoa->pessoa_nome;?></td>
+					<td><?php echo ConvUtil::formataCpf($pessoa->pessoa_cpf);?></td>
+					<td><?php echo $pessoa->pessoa_email;?></td>
+					<td><?php echo $pessoa->pessoa_tel;?></td>
+					<td>
+						<a href="/pessoas/editar/<?php echo $pessoa->pessoa_cod?>" title="editar" class="btn btn-warning"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+						<a href="" title="excluir" class="btn btn-danger" data-toggle="modal" data-target="#delete_<?php echo $pessoa->pessoa_cod?>">
+							<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+						</a>
+					</td>
+					<div class="modal fade" id="delete_<?php echo $pessoa->pessoa_cod?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				        <div class="modal-dialog" role="document">
+				            <div class="modal-content">
+				                <div class="modal-body">
+				                    <h3>Tem certeza que quer excluir <?php echo $pessoa->pessoa_nome?></h3>
+				                </div>
+				                <div class="modal-footer">
+				                    <a href="/pessoas/remove/<?php echo $pessoa->pessoa_cod?>" class="btn btn-primary">Sim</a>
+				                    <a href="" class="btn btn-primary" data-dismiss="modal"> Não</a>
+				                </div>
+				            </div>
+				        </div>
+	   			 	</div>
+				</tr>
+				<?php endforeach;
+					else:
+				?>
+                <tr class="notFound">
+                    <td colspan="8">
+                        Nenhum registro encontrado
+                    </td>
+                </tr>
+			<?php endif; ?>
+            </tbody>
+        </table>
+    </div>
+    
+    <?php echo $this->paginationControl($pessoas,'sliding','partials/paginator/control.phtml')?>
+          
+</section>
+	
+	
+

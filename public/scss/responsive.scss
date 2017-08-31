@@ -1,0 +1,413 @@
+@import "vendors/bootstrap/bootstrap/mixins";
+@import "vendors/bootstrap/bootstrap/variables";
+
+//medias queries
+
+@media screen and (min-width: 992px) and (max-width: 1202px) {
+  body{
+    >header{
+      >.container{
+        >.content{
+          >.user_container{
+            >.user_text{
+              width: 46%;
+            }
+          }
+        }
+      }
+    }
+    #form {
+      .title {
+        > h1 {
+          font-size: 25px;
+        }
+      }
+
+      .form_content {
+        margin-left: 24% !important;
+        form {
+          button {
+            margin: 10px 16% 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+
+  body{
+    >header{
+      >.container{
+        >.content{
+          >.user_container{
+            >.user_text{
+              width: 49%;
+            }
+          }
+        }
+      }
+    }
+    #form {
+      .title {
+        > h1 {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 725px) and (max-width: 767px) {
+  body{
+    >header{
+      >.container{
+        >.content{
+          .logo_container{
+            @include make-xs-column(4);
+          }
+
+          >.user_container{
+            >.user_text{
+              width: 47.5%;
+            }
+          }
+        }
+      }
+    }
+
+    #topo {
+
+      >.search {
+        @include make-xs-column(10);
+        @include make-xs-column-offset(1);
+      }
+    }
+
+    #form {
+      .title {
+        > h1 {
+          font-size: 22px;
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 590px) and (max-width: 725px) {
+  body {
+    > header {
+      > .container {
+        > .content {
+          > .user_container {
+            > .user_text {
+              width: 49%;
+            }
+          }
+        }
+      }
+    }
+
+    #form {
+      .title {
+        > h1 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 535px) and (max-width: 590px) {
+  body {
+    > header {
+      > .container {
+        > .content {
+          > .user_container {
+            > .user_text {
+              width: 46%;
+            }
+          }
+        }
+      }
+    }
+    #form {
+      .title {
+        > h1 {
+          font-size: 22px;
+        }
+      }
+
+      .form_content {
+
+        @include make-xs-column(10);
+        @include make-xs-column-offset(1);
+        margin-left: 8% !important;
+        form {
+          button {
+            margin: 10px 15% 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 465px) and (max-width: 535px) {
+  body {
+    > header {
+      > .container {
+        > .content {
+          > .user_container {
+            > .user_text {
+              width: 42%;
+            }
+
+            .logout{
+              >a {
+                padding: 4px 6px;
+              }
+
+            }
+          }
+        }
+      }
+    }
+    #form {
+      .title {
+        > h1 {
+          font-size: 22px;
+        }
+      }
+
+      .form_content {
+
+        @include make-xs-column(10);
+        @include make-xs-column-offset(1);
+        margin-left: 8% !important;
+        form {
+          button {
+            margin: 10px 15% 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 432px) and (max-width: 465px) {
+  body {
+    > header {
+      > .container {
+        > .content {
+          > .user_container {
+            @include make-xs-column(5);
+            @include make-xs-column-offset(7);
+          }
+        }
+      }
+    }
+    #form {
+      .title {
+        > h1 {
+          font-size: 22px;
+        }
+      }
+
+      .form_content {
+
+        @include make-xs-column(12);
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 432px) {
+  body {
+    > header {
+      > .container {
+        > .content {
+          > .user_container {
+            @include make-xs-column(7);
+            @include make-xs-column-offset(5);
+          }
+        }
+      }
+    }
+
+    #topo {
+      .links {
+        .list_links > li > a {
+          padding: 6px 8px;
+        }
+      }
+      > .titulo {
+        h1 {
+          font-size: 21px;
+        }
+      }
+    }
+
+    #form {
+      .title {
+        > h1 {
+          font-size: 22px;
+        }
+      }
+
+      .form_content {
+
+        @include make-xs-column(12);
+        margin-left: 0 !important;
+      }
+    }
+
+    footer {
+      .copy {
+        > p {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+    #table{
+      >.modal{
+        .modal-body{
+          h3{
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//medias genericas
+
+@media screen and (min-width: 590px) and (max-width: 767px) {
+  body {
+    #form {
+      .form_content {
+        @include make-xs-column(8);
+        @include make-xs-column-offset(4);
+        margin-left: 17% !important;
+        form {
+          button {
+            margin: 10px 15% 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 725px) and (max-width: 991px) {
+  body {
+    #form {
+      .form_content {
+        margin-left: 17% !important;
+        form {
+          button {
+            margin: 10px 15% 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 465px) and (max-width: 725px) {
+  body {
+    > header {
+      > .container {
+        > .content {
+          .logo_container {
+            @include make-xs-column(5);
+          }
+          > .user_container {
+
+            @include make-xs-column(4);
+            @include make-xs-column-offset(2);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 465px) {
+  body {
+    > header {
+      padding: 10px 0;
+      > .container {
+        > .content {
+          .logo_container {
+            @include make-xs-column(12);
+
+            > .logo_container__logo {
+              @include make-xs-column(12);
+
+              img {
+                margin: 0 auto;
+                padding-top: 25px;
+              }
+            }
+          }
+
+          > .user_container {
+            right: -15px;
+            > .user_text {
+              width: 45%;
+            }
+          }
+        }
+      }
+    }
+
+    #form {
+      .form_content {
+        form {
+          button {
+            margin: 10px 0 20px;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    footer {
+      padding-top: 0;
+      .logo_container {
+
+        padding: 10px 0;
+        @include make-xs-column(12);
+
+        > .logo_container__logo {
+          @include make-xs-column(12);
+
+          img {
+            margin: 0 auto;
+            padding-top: 25px;
+          }
+        }
+      }
+      #redes_sociais {
+
+        @include make-xs-column(10);
+        @include make-xs-column-offset(2);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+

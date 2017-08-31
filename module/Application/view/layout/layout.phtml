@@ -1,0 +1,106 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('zf2Crud')?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+            ->appendName('description', 'sistema de crud simples com zend framework 2')
+            ->appendName('keywords', 'sistema de crud simples com zend framework 2')
+            ->appendName('author', 'Ronily Gomes')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))                     
+        				->prependStylesheet($this->basePath('css/responsive.css'))
+                        ->prependStylesheet($this->basePath('css/style.css'))
+                        ->prependStylesheet($this->basePath('css/cadastro.css'))
+        				->prependStylesheet($this->basePath('css/vendors/plugin.css'))
+        ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath('js/vendors/bootstrap/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/vendors/utilities/jquery.maskedinput.min.js'))
+            ->prependFile($this->basePath('js/vendors/utilities/script.js'))
+            ->prependFile($this->basePath('js/vendors/jquery/jquery.min.js'))
+            ->prependFile($this->basePath('js/vendors/utilities/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath('js/vendors/utilities/html5shiv.min.js'),   'text/javascript', array('conditional' => 'lt IE 9',))
+        ; ?>
+
+    </head>
+    <body>
+		<header class="container-fluid">
+		    <div class="container">
+		        <div class="content">
+		            <div class="user_container">
+		                <div class="icon">
+		                    <span class="glyphicon glyphicon-user"></span>
+		                </div>
+		                <div class="user_text">
+		                    <p>Ronily</p>
+		                </div>
+		                <div class="logout">
+		                    <a class="btn btn-primary" href="#">Sair</a>
+		                </div>
+		            </div>
+		            <div class="logo_container">
+		                <div class="logo_container__logo">
+		                	<a href="http://zfcrud/pessoas">
+		                    	<img src="<?php echo $this->basePath('images/logo.fw.png') ?>" alt="zfcrud" title="zfcrud" class="img-responsive"/>
+		                	</a>
+		                </div>
+		            </div>
+		
+		        </div>
+		    </div>
+		</header>
+		
+		
+        <div class="">
+            <?php echo $this->content; ?>
+        </div> <!-- /container -->
+        
+        
+        
+        <footer class="container-fluid">
+			    <div class="container">
+			        <div class="content">
+			            <div class="logo_container">
+			                <div class="logo_container__logo">
+			                    <img src="<?php echo $this->basePath('images/logo.fw.png') ?>" alt="zfcrud" title="zfcrud" class="img-responsive"/>
+			                </div>
+			            </div>
+			
+			            <div id="redes_sociais">
+			                        <div id="redes_sociais__container">
+			                            <ul id="redes-sociais__icons">
+			                                <li>
+			                                    <a target="_blank" href="https://pt-br.facebook.com" class="icon icon--facebook"></a>
+			                                </li>
+			                                <li>
+			                                    <a target="_blank" href="https://twitter.com" class="icon icon--twitter"></a>
+			                                </li>
+			                                <li>
+			                                    <a target="_blank" href="https://www.youtube.com" class="icon icon--youtube"></a>
+			                                </li>
+			                                <li>
+			                                    <a target="_blank" href="https://www.google.com.br/?gws_rd=ssl" class="icon icon--gp"></a>
+			                                </li>
+			                            </ul>
+			
+			                        </div>
+			            </div>
+			
+			            <div class="copy">
+			                <p><?php echo date('Y') ?> &copy; - Todos os direitos resersvados</p>
+			            </div>
+			
+			        </div>
+			    </div>
+			</footer>
+    </body>
+</html>

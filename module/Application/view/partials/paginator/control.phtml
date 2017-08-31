@@ -1,0 +1,35 @@
+	<div class="table__paginator" style="width: 235px;">
+        <nav>
+            <ul class="pagination">
+            	<?php if(isset($this->previous)):?>
+            	<li>
+					<a href="?pagina=<?php echo $this->previous?>" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+				<?php endif;?>
+				
+					<?php foreach ($this->pagesInRange as $item):?>
+						<?php if($this->current == $item):?>	
+							<li class="active">
+								<a href="javascript:void(0)"><?php echo $item?></a>
+							</li>	
+						<?php else:?>
+							<li>
+								<a href="?pagina=<?php echo $item;?>"><?php echo $item?></a>
+							</li>
+						<?php endif;?>
+					<?php endforeach;?>
+					
+					
+					
+				<?php if(isset($this->next)):?>
+				<li>
+                    <a href="?pagina=<?php echo $this->next?>" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+				<?php endif;?>
+            </ul>
+        </nav>
+    </div>
